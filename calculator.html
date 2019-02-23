@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-8 m-auto col-lg-8 col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3">F number</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" name="fnumber" id="fnumber">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3">L number</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" name="lnumber" id="lnumber">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-3">Result</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control" name="flnumber" id="Result">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-9">
+                            <input type="submit" id="add" value="+" class="btn btn-info" name="btn">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-9">
+                            <input type="submit" id="sub" value="-" class="btn btn-info" name="btn">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-9">
+                            <input type="submit" id="multi" value="*" class="btn btn-info" name="btn">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-9">
+                            <input type="submit" id="div" value="/" class="btn btn-info" name="btn">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-9">
+                            <input type="submit" id="mod" value="%" class="btn btn-info" name="btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var addition = document.getElementById('add');
+    addition.onclick = function () {
+        var Fnumber = Number(document.getElementById('fnumber').value);
+        var Lnumber = Number(document.getElementById('lnumber').value);
+        var Result = Fnumber+Lnumber;
+        document.getElementById('Result').value = Result;
+    }
+    var substruction = document.getElementById('sub');
+    substruction.onclick = function () {
+        var Fnumber = Number(document.getElementById('fnumber').value);
+        var Lnumber = Number(document.getElementById('lnumber').value);
+        var Result = Fnumber-Lnumber;
+        document.getElementById('Result').value = Result;
+    }
+    var multiplication = document.getElementById('multi');
+    multiplication.onclick = function () {
+        var Fnumber = Number(document.getElementById('fnumber').value);
+        var Lnumber = Number(document.getElementById('lnumber').value);
+        var Result = Fnumber*Lnumber;
+        document.getElementById('Result').value = Result;
+    }
+    var division = document.getElementById('div');
+    division.onclick = function () {
+        var Fnumber = Number(document.getElementById('fnumber').value);
+        var Lnumber = Number(document.getElementById('lnumber').value);
+        var Result = Fnumber/Lnumber;
+        document.getElementById('Result').value = Result;
+    }
+    var modulus = document.getElementById('mod');
+    modulus.onclick = function () {
+        var Fnumber = Number(document.getElementById('fnumber').value);
+        var Lnumber = Number(document.getElementById('lnumber').value);
+        var Result = Fnumber%Lnumber;
+        document.getElementById('Result').value = Result;
+    }
+</script>
+</body>
+</html>
