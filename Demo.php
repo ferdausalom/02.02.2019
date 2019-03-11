@@ -15,14 +15,26 @@ class Demo
             $check = $_POST['check'];
             $result = "";
 
-            for ($i=$fnumber;$i<=$lnumber;$i++){
-                if ($i%2 !=0 && $check == "ODD"){
-                    $result.=$i." ";
-                }elseif ($i%2 ==0 && $check == "EVEN"){
-                    $result.=$i." ";
+            if ($fnumber<$lnumber) {
+                for ($i = $fnumber; $i <= $lnumber; $i++) {
+                    if ($i % 2 != 0 && $check == "ODD") {
+                        $result .= $i . " ";
+                    } elseif ($i % 2 == 0 && $check == "EVEN") {
+                        $result .= $i . " ";
+                    }
                 }
+                return $result;
             }
-            return $result;
+            else{
+                for ($i = $fnumber; $i >= $lnumber; $i--) {
+                    if ($i % 2 != 0 && $check == "ODD") {
+                        $result .= $i . " ";
+                    } elseif ($i % 2 == 0 && $check == "EVEN") {
+                        $result .= $i . " ";
+                    }
+                }
+                return $result;
+            }
         }
     }
 }
