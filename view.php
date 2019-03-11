@@ -1,35 +1,35 @@
-<?php 
+<?php
 
-if (isset($_POST["btn"])){
-    require './MyCalculator.php';
-    
-    $myCalculator = new MyCalculator();
-    
-    $result = $myCalculator->calculator($_POST);
-    
-}
+    require "./Demo.php";
+
+    $demo = new Demo();
+
+    $result = $demo->makeOddEven();
 
 ?>
+
 <form action="" method="post">
     <table>
         <tr>
-            <td>F number</td>
+            <td>first Number</td>
             <td><input type="text" name="firstNumber"></td>
         </tr>
         <tr>
-            <td>L number</td>
+            <td>last Number</td>
             <td><input type="text" name="lastNumber"></td>
         </tr>
+
         <tr>
-            <td>Full number</td>
-            <td><input type="text" name="fullNumber" value="<?php echo $result;?>"></td>
+            <td><input type="radio" name="check" value="ODD" > ODD</td>
+            <td><input type="radio" name="check" value="EVEN" > EVEN</td>
         </tr>
         <tr>
-            <td><input type="submit" name="btn" value="+"></td>
-            <td><input type="submit" name="btn" value="-"></td>
-            <td><input type="submit" name="btn" value="*"></td>
-            <td><input type="submit" name="btn" value="/"></td>
-            <td><input type="submit" name="btn" value="%"></td>
+            <td>full Number</td>
+            <td><input type="text" name="fullName" value="<?php echo $result; ?>" ></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="btn" value="Submit"></td>
         </tr>
     </table>
 </form>
